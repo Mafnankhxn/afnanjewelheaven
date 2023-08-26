@@ -1,24 +1,39 @@
-import Link from "next/link"
-const hero = () => {
-  return (
-    <div className="w-full h-screen">
-      <section className="flex justify-between content-center items-center">
-        <div className="grid justify-center content-center mt-20 ml-10 gap-y-10">
-        <h1 className="text-black text-5xl leading-tight">Adorn Yourself in Elegance:<br/>Discover the Sparkling Symphony of<br/>Our Exquisite Jewelry Collection.</h1>
-        <p className="text-slate-500 text-xl">
-        "Crafted with Precision and Worn with Pride: Your Perfect Jewelry Awaits"
-        </p>
-        <div className="flex gap-x-10">
-        <button className="bg-black p-5 text-lg text-slate-50">Design Your Ring</button>
-      <button className="bg-slate-50 outline text-lg outline-black text-black p-3">See Our Collection</button>
-        </div>
-        </div>
-        <div className="mt-10 mr-10">
-        <img src="https://www.pngall.com/wp-content/uploads/2016/05/Jewellery-Free-Download-PNG.png" alt="hero image" height={400}width={400}/>
-        </div>
-      </section>
-    </div>
-  )
-}
+import Link from "next/link";
 
-export default hero
+const Hero = () => {
+  return (
+    <section className="bg-stone-50 py-16 md:py-20">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-10">
+        <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left mb-10 md:mb-0 md:w-1/2">
+          <h1 className="text-black text-4xl md:text-5xl font-semibold leading-tight mb-4">
+            Adorn Yourself in Elegance:<br />Discover the Sparkling Symphony of<br />Our Exquisite Jewelry Collection.
+          </h1>
+          <p className="text-slate-500 text-lg md:text-xl mb-6">
+            "Crafted with Precision and Worn with Pride: Your Perfect Jewelry Awaits"
+          </p>
+          <div className="flex flex-col md:flex-row gap-4">
+            <Link href="/design">
+              <button className="bg-black text-white py-3 px-8 md:py-4 md:px-10 text-lg font-semibold rounded-full mb-4 md:mb-0 md:mr-4 hover:bg-gray-800 transition duration-300">
+                Design Your Ring
+              </button>
+            </Link>
+            <Link href="/collection">
+              <button className="bg-slate-100 outline text-black py-3 px-8 md:py-4 md:px-10 text-lg font-semibold rounded-full outline-black hover:bg-gray-100 transition duration-300">
+                See Our Collection
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 mt-6 md:mt-0">
+          <img
+            src="https://www.pngall.com/wp-content/uploads/2016/05/Jewellery-Free-Download-PNG.png"
+            alt="hero"
+            className="w-full h-auto"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

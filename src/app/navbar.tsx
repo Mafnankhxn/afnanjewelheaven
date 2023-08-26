@@ -1,32 +1,40 @@
+import Link from "next/link";
+import { InputDemo } from "./search";
 
-import Link from "next/link"
-import { InputDemo } from "./search"
-const navbar = () => {
+const Navbar = () => {
   return (
     <header>
-        <nav className="bg-stone-50 flex justify-between items-center h-20 px-10 border-b py-10">
-        <div className="grid items-center">
-  <span className="text-center font-serif relative text-2xl font-semibold leading-snug tracking-wide">
-    AFNAN JEWEL
-  </span>
-  <span className="flex justify-center">
-    <p className="text-2xl font-semibold leading-relaxed font-serif tracking-wide">HEAVEN</p>
-  <img className="ml-1 transform -rotate-6 w-10 h-10" src="logopic.png" alt="logo" />
-  </span>
-</div>
+      <nav className="bg-stone-50 flex flex-col md:flex-row justify-between items-center md:h-20 px-6 md:px-10 border-b py-4 md:py-10">
+        <div className="flex gap-x-2 items-center">
+          <span className="text-center font-serif relative text-xl md:text-3xl font-semibold leading-snug tracking-wide">
+            JEWELIOUS
+          </span>
+          <span> 
+         <img className="ml-1 transform -rotate-6 w-8 md:w-10 h-8 md:h-10" src="logopic.png" alt="logo" />
+          </span>
+        </div>
 
-            <ul className="flex gap-x-10 text-lg">
-                <Link href="/">Home</Link>
-                <Link href="/allproducts">All products</Link>
-                <Link href="/about">About</Link>
-                <Link href="/contact"><li>Contact us</li></Link>
-            </ul>
-            <div className=" mr-12">
-            <InputDemo/>
-            </div>
-        </nav>
+        <ul className="flex flex-col md:flex-row gap-y-4 md:gap-x-10 text-lg">
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/allproducts">All products</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact us</Link>
+          </li>
+        </ul>
+
+        <div className="mt-4 md:mt-0">
+          <InputDemo />
+        </div>
+      </nav>
     </header>
-  )
-}
+  );
+};
 
-export default navbar
+export default Navbar;

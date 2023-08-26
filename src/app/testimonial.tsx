@@ -11,7 +11,7 @@ const testimonials = [
   {
     id: 2,
     name: 'Sarah Malik',
-    image: '/test2.jpg.crdownload',
+    image: '/test2.jpg',
     text: 'Absolutely in love with the elegant design of my bracelet, it adds a touch of sophistication.',
   },
   {
@@ -50,47 +50,51 @@ const TestimonialSlider = () => {
   const handleNextSlide = () => {
     setActiveSlide((prevSlide) => (prevSlide === testimonials.length - 1 ? 0 : prevSlide + 1));
   };
+
   const currentTestimonial = testimonials[activeSlide];
+
   return (
-    <><h1 className='text-center font-bold text-4xl mt-20'>
-        Testimonials
-        </h1>
-        <div className="flex items-center mt-20 justify-center h-screen">
-          <div className="w-full max-w-2xl p-8 bg-white shadow-xl rounded-lg">
-              <div className="flex flex-col items-center justify-center h-1/2">
-                  <img
-                      src={currentTestimonial.image}
-                      alt={`Customer ${currentTestimonial.name}`}
-                      className="w-50 h-72 mx-auto mb-4 rounded-full" />
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      {currentTestimonial.name}
-                  </h3>
-                  <div className="absolute top-0 left-0 right-0 h-px bg-gray-300" />
-                  <p className="text-gray-700 text-center my-4">
-                      {currentTestimonial.text}
-                  </p>
-              </div>
-              <div className="mt-6 flex justify-center">
-                  <button
-                      onClick={handlePrevSlide}
-                      className="text-xl pr-20 text-gray-500 focus:outline-none"
-                  >
-                      &lt;
-                  </button>
-                  <button
-                      onClick={handleNextSlide}
-                      className="ml-4 text-xl pl-20 text-gray-500 focus:outline-none"
-                  >
-                      &gt;
-                  </button>
-              </div>
+    <section className="bg-gray-100 py-16">
+      <div className="container mx-auto">
+        <h1 className="text-center font-bold text-4xl mb-10">Testimonials</h1>
+        <div className="flex items-center justify-center">
+          <div className="w-full max-w-xl p-6 bg-white shadow-lg rounded-lg">
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src={currentTestimonial.image}
+                alt={`Customer ${currentTestimonial.name}`}
+                className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-4 rounded-full object-cover"
+              />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {currentTestimonial.name}
+              </h3>
+              <div className="w-16 h-1 bg-gray-300 mb-4" />
+              <p className="text-gray-700 text-center my-4">
+                {currentTestimonial.text}
+              </p>
+            </div>
+            <div className="mt-6 flex justify-center">
+              <button
+                onClick={handlePrevSlide}
+                className="text-xl pr-8 text-gray-500 focus:outline-none"
+              >
+                &lt;
+              </button>
+              <button
+                onClick={handleNextSlide}
+                className="ml-4 text-xl pl-8 text-gray-500 focus:outline-none"
+              >
+                &gt;
+              </button>
+            </div>
           </div>
-      </div></>
+        </div>
+      </div>
+    </section>
   );
 };
 
 export default TestimonialSlider;
-
 
 
 

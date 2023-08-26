@@ -1,18 +1,17 @@
-
+import Link from "next/link"
 const footer = () => {
   return (
       <footer className="text-gray-600 bg-stone-50 border-t body-font">
   <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-  <div className="grid items-center font-serif">
-  <span className="text-center relative text-2xl font-semibold leading-snug tracking-wide">
-    AFNAN JEWEL
-  </span>
-  <span className="flex justify-center">
-    <p className="text-2xl font-semibold leading-relaxed tracking-wide">HEAVEN</p>
-  <img className="ml-1 transform -rotate-6 w-10 h-10" src="logopic.png" alt="logo" />
-  </span>
-</div>
-    <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 AfnanJewelHeaven —
+  <div className="flex gap-x-2 items-center">
+          <span className="text-center font-serif relative text-xl md:text-2xl font-semibold leading-snug tracking-wide">
+            JEWELIOUS
+          </span>
+          <span> 
+         <img className="ml-1 transform -rotate-6 w-8 md:w-10 h-8 md:h-10" src="logopic.png" alt="logo" />
+          </span>
+        </div>
+    <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"><Link href="https://github.com/mafnankhxn">Muhammad Afnan_</Link>
       <a href="https://twitter.com/knyttneve" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">All Rights Reserved</a>
     </p>
     <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">

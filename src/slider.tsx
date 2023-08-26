@@ -106,7 +106,7 @@ const Slider: React.FC = () => {
 
   // Auto slide to the next slide every 3 seconds
   useEffect(() => {
-    const intervalId = setInterval(goToNextSlide, 5000)
+    const intervalId = setInterval(goToNextSlide, 3000);
     // Clear the interval when the component unmounts or when currentIndex changes
     return () => {
       clearInterval(intervalId);
@@ -114,17 +114,8 @@ const Slider: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <div
-      className={`w-full h-screen flex items-center justify-center ${
-        isSwiping ? 'select-none' : ''
-      }`}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-    >
-      <div className="w-4/5 h-3/4 bg-white border shadow-lg rounded-lg overflow-hidden relative">
+    <div className="w-full h-screen flex items-center justify-center select-none">
+      <div className="w-11/12 h-3/4 md:w-4/5 md:h-3/5 sm:w-11/12 sm:h-1/2 bg-white border shadow-lg rounded-lg overflow-hidden relative">
         <div
           className="relative w-full h-full flex transition-transform duration-300"
           style={{
@@ -156,5 +147,5 @@ const Slider: React.FC = () => {
   );
 };
 
-export default Slider;
 
+export default Slider;

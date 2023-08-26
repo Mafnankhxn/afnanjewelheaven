@@ -20,7 +20,7 @@ const page = () => {
         </div>
         <div className="md:w-1/2 md:pl-8">
           <img
-            src="about_image.jpg"
+            src="aboutimg.jpg"
             alt="About Us"
             className="rounded-lg shadow-xl"
           />
