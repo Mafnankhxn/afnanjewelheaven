@@ -9,7 +9,7 @@ const Hero = () => {
             Adorn Yourself in Elegance:<br />Discover the Sparkling Symphony of<br />Our Exquisite Jewelry Collection.
           </h1>
           <p className="text-slate-500 text-lg md:text-xl mb-6">
-            "Crafted with Precision and Worn with Pride: Your Perfect Jewelry Awaits"
+            Crafted with Precision and Worn with Pride: Your Perfect Jewelry Awaits
           </p>
           <div className="flex flex-col md:flex-row gap-4">
             <Link href="/design">
